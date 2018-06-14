@@ -131,7 +131,7 @@ public class Main {
 	    	ligne = ligne.toLowerCase()
 	    			// pas de caractère spéciaux
 	    			.replaceAll("['’-]", "_")
-	    			.replaceAll("[0-9\",:;!\\?\\.\\]\\[\\)\\(]", " ");
+	    			.replaceAll("[0-9\",:;!\\?\\.\\]\\[\\)\\(—]", " ");
 	    	// retirer les espaces inutiles
 	    	while (ligne.contains("  ")) {
 	    		ligne = ligne.replaceAll("  ", " ");
