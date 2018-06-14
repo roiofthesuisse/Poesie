@@ -22,7 +22,7 @@ public class Main {
 	private static final boolean DETERMINISTE = false;
 	private static final Random RANDOM = DETERMINISTE ? null : new Random();
 	
-	private static final String debut = "Ce matin les fleurs";
+	private static final String debut = "C'est à l'orée du bois que";
 	private static final int metre = 8;
 	private static final int tailleStrophe = 4;
 	private static final int combienDeStrophes = 3;
