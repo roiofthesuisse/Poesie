@@ -130,7 +130,7 @@ public class Main {
 	    	// bas de casse
 	    	ligne = ligne.toLowerCase()
 	    			// pas de caractère spéciaux
-	    			.replaceAll("['’-]", "")
+	    			.replaceAll("['’-]", "_")
 	    			.replaceAll("[0-9\",:;!\\?\\.\\]\\[\\)\\(]", " ");
 	    	// retirer les espaces inutiles
 	    	while (ligne.contains("  ")) {
@@ -253,6 +253,7 @@ public class Main {
 		motsInterdits.add("je");
 		motsInterdits.add("il");
 		motsInterdits.add("on");
+		motsInterdits.add("lon");
 		motsInterdits.add("ils");
 		motsInterdits.add("nous");
 		motsInterdits.add("vous");
