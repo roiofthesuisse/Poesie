@@ -22,7 +22,7 @@ public class Main {
 	private static final boolean DETERMINISTE = false;
 	private static final Random RANDOM = DETERMINISTE ? null : new Random();
 	
-	private static final String debut = "C'est à l'orée du bois que";
+	private static final String debut = "Quand vient la nuit";
 	private static final int metre = 8;
 	private static final int tailleStrophe = 4;
 	private static final int combienDeStrophes = 3;
@@ -131,7 +131,7 @@ public class Main {
 	    	ligne = ligne.toLowerCase()
 	    			// pas de caractère spéciaux
 	    			.replaceAll("['’-]", "_")
-	    			.replaceAll("[0-9\",:;!\\?\\.\\]\\[\\)\\(—]", " ");
+	    			.replaceAll("[0-9\",:;!\\?\\.\\]\\[\\)\\(—…]", " ");
 	    	// retirer les espaces inutiles
 	    	while (ligne.contains("  ")) {
 	    		ligne = ligne.replaceAll("  ", " ");
@@ -290,6 +290,7 @@ public class Main {
 		motsInterdits.add("comme");
 		motsInterdits.add("quant");
 		motsInterdits.add("entre");
+		motsInterdits.add("chaque");
 		return motsInterdits;
 	}
 	
