@@ -131,7 +131,7 @@ public class Main {
 	    	ligne = ligne.toLowerCase()
 	    			// pas de caractère spéciaux
 	    			.replaceAll("'", "")
-	    			.replaceAll("[0-9\",:;!\\?\\.\\]\\[\\)\\(-]", " ");
+	    			.replaceAll("[0-9\"’,:;!\\?\\.\\]\\[\\)\\(-]", " ");
 	    	// retirer les espaces inutiles
 	    	while (ligne.contains("  ")) {
 	    		ligne = ligne.replaceAll("  ", " ");
@@ -208,7 +208,9 @@ public class Main {
 	
 	private static final List<String> motsInterditsEnFinDeVers() {
 		List<String> motsInterdits = new ArrayList<>();
+		motsInterdits.add("a");
 		motsInterdits.add("à");
+		motsInterdits.add("au");
 		motsInterdits.add("aux");
 		motsInterdits.add("le");
 		motsInterdits.add("la");
@@ -229,6 +231,10 @@ public class Main {
 		motsInterdits.add("une");
 		motsInterdits.add("nos");
 		motsInterdits.add("vos");
+		motsInterdits.add("notre");
+		motsInterdits.add("votre");
+		motsInterdits.add("leur");
+		motsInterdits.add("leurs");
 		motsInterdits.add("ma");
 		motsInterdits.add("mon");
 		motsInterdits.add("mes");
@@ -258,9 +264,20 @@ public class Main {
 		motsInterdits.add("quon");
 		motsInterdits.add("quun");
 		motsInterdits.add("quen");
+		motsInterdits.add("qu");
 		motsInterdits.add("où");
 		motsInterdits.add("ou");
 		motsInterdits.add("tout");
+		motsInterdits.add("quelque");
+		motsInterdits.add("de");
+		motsInterdits.add("du");
+		motsInterdits.add("ô");
+		motsInterdits.add("jai");
+		motsInterdits.add("ai");
+		motsInterdits.add("ont");
+		motsInterdits.add("nen");
+		motsInterdits.add("comme");
+		motsInterdits.add("s");
 		return motsInterdits;
 	}
 	
