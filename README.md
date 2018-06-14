@@ -1,2 +1,2 @@
 # Poesie
-Générateur des poèmes
+Générateur de poèmes
