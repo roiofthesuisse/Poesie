@@ -48,9 +48,15 @@ public class Vers {
             // quelle est la dernière lettre de ce mot ?
             char derniereLettreDuMot = mot.charAt(mot.length() - 1);
             if (derniereLettreDuMot == 'e') {
-            	int avantDernierePosition = mot.length() - 2;
-                char avantDerniereLettreDuMot = mot.charAt(avantDernierePosition);
-                motPrecedentFinitParE = !estVoyelle(avantDerniereLettreDuMot, avantDernierePosition, mot);
+            	try {
+	            	int avantDernierePosition = mot.length() - 2;
+	                char avantDerniereLettreDuMot = mot.charAt(avantDernierePosition);
+	                motPrecedentFinitParE = !estVoyelle(avantDerniereLettreDuMot, avantDernierePosition, mot);
+            	} catch (StringIndexOutOfBoundsException e) {
+            		motPrecedentFinitParE = false;
+            		System.err.println("Mot d'une seule lettre se terminant par 'e' : "+vers);
+            		e.printStackTrace();
+            	}
             } else {
                 motPrecedentFinitParE = false;
             }

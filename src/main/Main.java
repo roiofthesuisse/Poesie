@@ -130,8 +130,8 @@ public class Main {
 	    	// bas de casse
 	    	ligne = ligne.toLowerCase()
 	    			// pas de caractère spéciaux
-	    			.replaceAll("'", "")
-	    			.replaceAll("[0-9\"’,:;!\\?\\.\\]\\[\\)\\(-]", " ");
+	    			.replaceAll("['’]", "")
+	    			.replaceAll("[0-9\",:;!\\?\\.\\]\\[\\)\\(-]", " ");
 	    	// retirer les espaces inutiles
 	    	while (ligne.contains("  ")) {
 	    		ligne = ligne.replaceAll("  ", " ");
@@ -264,6 +264,11 @@ public class Main {
 		motsInterdits.add("quon");
 		motsInterdits.add("quun");
 		motsInterdits.add("quen");
+		motsInterdits.add("quà");
+		motsInterdits.add("quil");
+		motsInterdits.add("quelle");
+		motsInterdits.add("quel");
+		motsInterdits.add("quels");
 		motsInterdits.add("qu");
 		motsInterdits.add("où");
 		motsInterdits.add("ou");
@@ -274,10 +279,12 @@ public class Main {
 		motsInterdits.add("ô");
 		motsInterdits.add("jai");
 		motsInterdits.add("ai");
+		motsInterdits.add("na");
+		motsInterdits.add("nai");
 		motsInterdits.add("ont");
 		motsInterdits.add("nen");
 		motsInterdits.add("comme");
-		motsInterdits.add("s");
+		motsInterdits.add("quant");
 		return motsInterdits;
 	}
 	
