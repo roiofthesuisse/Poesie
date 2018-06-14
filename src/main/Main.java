@@ -130,8 +130,8 @@ public class Main {
 	    	// bas de casse
 	    	ligne = ligne.toLowerCase()
 	    			// pas de caractère spéciaux
-	    			.replaceAll("['’]", "")
-	    			.replaceAll("[0-9\",:;!\\?\\.\\]\\[\\)\\(-]", " ");
+	    			.replaceAll("['’-]", "")
+	    			.replaceAll("[0-9\",:;!\\?\\.\\]\\[\\)\\(]", " ");
 	    	// retirer les espaces inutiles
 	    	while (ligne.contains("  ")) {
 	    		ligne = ligne.replaceAll("  ", " ");
